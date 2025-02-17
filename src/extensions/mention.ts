@@ -9,13 +9,20 @@ import { Mention as TiptapMention } from '@tiptap/extension-mention'
 /**
  * Represents the interface for link options, extending TiptapLinkOptions and GeneralOptions.
  */
-export interface MentionOptions extends TiptapMentionOptions, GeneralOptions<MentionOptions> {
-  /** Component for the link dialog */
-  dialogComponent: any
-}
+export interface MentionOptions extends TiptapMentionOptions, GeneralOptions<MentionOptions> { }
 
 export const Mention = /* @__PURE__*/ TiptapMention.extend<MentionOptions>({
+  addAttributes() {
+    return {
+      ...this.parent?.()
+    }
+  },
   addOptions() {
+    return {
+      ...this.parent?.()
+    }
+  },
+  addCommands() {
     return {
       ...this.parent?.()
     }

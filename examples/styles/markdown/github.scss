@@ -1129,6 +1129,10 @@
     clip: auto;
   }
 
+  .mention {
+    background-color: red;
+  }
+
   &::-webkit-calendar-picker-indicator {
     filter: invert(50%);
   }
