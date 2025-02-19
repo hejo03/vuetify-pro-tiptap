@@ -1,4 +1,5 @@
 import { NODE_TYPE_MENU } from '@/constants/define'
+import { mergeAttributes } from "@tiptap/core"
 import { markRaw } from 'vue'
 import {
   BaseKit,
@@ -130,13 +131,6 @@ export const vuetifyProTipTap = createVuetifyProTipTap({
     Mention.configure({
       HTMLAttributes: {
         class: 'mention'
-      },
-      renderHTML({ options, node }) {
-        return [
-          'a',
-          mergeAttributes({ href: '/profile/1' }, options.HTMLAttributes),
-          `${options.suggestion.char}${node.attrs.label ?? node.attrs.id}`
-        ]
       },
       suggestion
     })
