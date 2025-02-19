@@ -23,6 +23,7 @@ import {
   Italic,
   Link,
   MarkdownTheme,
+  Mention,
   OrderedList,
   Strike,
   SubAndSuperScript,
@@ -37,6 +38,8 @@ import {
 import LinkDialog from './components/LinkDialog.vue'
 
 import SelectImage from './components/SelectImage.vue'
+import suggestion from './suggestions'
+
 /*
  * @Date: 2023-05-11 22:14:19
  * @LastEditors: yikoyu 2282373181@qq.com
@@ -44,8 +47,8 @@ import SelectImage from './components/SelectImage.vue'
  * @FilePath: \vuetify-pro-tiptap\examples\tiptap.ts
  */
 import 'vuetify-pro-tiptap/styles/editor.css'
-
 import 'vuetify-pro-tiptap/styles/markdown.css'
+
 import './styles/markdown/github.scss'
 
 import './styles/markdown/maidragon.scss'
@@ -123,6 +126,19 @@ export const vuetifyProTipTap = createVuetifyProTipTap({
     }),
     Fullscreen.configure({
       useWindow: true
+    }),
+    Mention.configure({
+      HTMLAttributes: {
+        class: 'mention'
+      },
+      renderHTML({ options, node }) {
+        return [
+          'a',
+          mergeAttributes({ href: '/profile/1' }, options.HTMLAttributes),
+          `${options.suggestion.char}${node.attrs.label ?? node.attrs.id}`
+        ]
+      },
+      suggestion
     })
   ]
 })

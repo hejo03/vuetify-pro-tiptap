@@ -1,7 +1,7 @@
 {
   "name": "vuetify-pro-tiptap",
   "type": "module",
-  "version": "2.5.7",
+  "version": "2.5.8",
   "private": false,
   "packageManager": "pnpm@8.15.8",
   "description": "tiptap text editor on vuejs and vuetify",
@@ -91,7 +91,7 @@
     "@tiptap/extension-italic": "^2.10.3",
     "@tiptap/extension-link": "^2.10.3",
     "@tiptap/extension-list-item": "^2.10.3",
-    "@tiptap/extension-mention": "^2.10.3",
+    "@tiptap/extension-mentiocd n": "^2.10.3",
     "@tiptap/extension-ordered-list": "^2.10.3",
     "@tiptap/extension-paragraph": "^2.10.3",
     "@tiptap/extension-placeholder": "^2.10.3",
@@ -108,6 +108,7 @@
     "@tiptap/extension-text-align": "^2.10.3",
     "@tiptap/extension-text-style": "^2.10.3",
     "@tiptap/extension-underline": "^2.10.3",
+    "@tiptap/suggestion": "^2.10.3",
     "@tiptap/html": "^2.10.3",
     "@tiptap/pm": "^2.10.3",
     "@tiptap/vue-3": "^2.10.3"
